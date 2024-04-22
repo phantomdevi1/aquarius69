@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Продукция</title>
+  <title>Новости</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" href="img/favicon.png" type="image/x-icon" />
 </head>
@@ -19,33 +19,34 @@
   </div>
 </header>
 
-<div class="content_products">
+<div class="news_content">
   <div class="title_page">
-    <h1>Продукция</h1>
+    <h1>Новости</h1>
   </div>
-  <div class="content_products-cards">
-    <?php
-    include 'config.php';
 
-    // Запрос к базе данных
-    $sql = "SELECT `name`, `image_url` FROM `Products`";
-    $result = $conn->query($sql);
+  <?php
+  // Подключение к базе данных
+  include 'config.php';
 
-    // Вывод данных
-    if ($result->num_rows > 0) {
-      while($row = $result->fetch_assoc()) {
-        echo '<div class="product_block">';
-        echo '<p>' . $row["name"] . '</p>';
-        echo '<img src="' . $row["image_url"] . '" alt="">';
-        echo '</div>';
-      }
-    } else {
-      echo "0 результатов";
+  // Запрос к базе данных
+  $sql = "SELECT `title`, `content`, `date` FROM `News`";
+  $result = $conn->query($sql);
+
+  // Вывод данных
+  if ($result->num_rows > 0) {
+    while($row = $result->fetch_assoc()) {
+      echo '<div class="news_block">';
+      echo '<p class="title_news">' . $row["title"] . '</p>';
+      echo '<p class="date_news">' . $row["date"] . '</p>';
+      echo '<hr class="news_hr">';
+      echo '<div class="content-news_block">' . $row["content"] . '</div>';
+      echo '</div>';
     }
-    $conn->close();
-    ?>
-  </div>
-  <a class="where_buy" href="https://www.aq.ru/where-buy/"><button>Где купить?</button></a>
+  } else {
+    echo "Новостей пока нет";
+  }
+  ?>
+
 </div>
 
 <footer>
