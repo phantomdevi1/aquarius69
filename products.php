@@ -11,12 +11,12 @@
 <header id="myHeader">
   <img src="img/logo_header.svg" alt="" />
   <div class="toolbar">
-    <a href="index.html">О компании</a>
-    <a href="products.php">Продукция</a>
-    <a href="news.php">Новости</a>
-    <a href="">Сотрудникам</a>
-    <a href="">Контакты</a>
-  </div>
+        <a href="index.html">О компании</a>
+        <a href="products.php">Продукция</a>
+        <a href="news.php">Новости</a>
+        <a href="authentication.php">Сотрудникам</a>
+        <a href="">Контакты</a>
+      </div>
 </header>
 
 <div class="content_products">

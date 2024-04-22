@@ -250,3 +250,55 @@ footer {
   margin-top: 10px;
   text-align: left;
 }
+
+/* authentication */
+.auth_block {
+  width: 55%;
+  background-color: #3faba9;
+  min-height: 200px;
+  margin-top: 150px;
+  border-radius: 10px;
+  text-align: center;
+}
+.auth_block p {
+  color: #fff;
+  margin-top: 50px;
+  font-size: 32px;
+  font-weight: 600;
+}
+.auth_block form {
+  display: flex;
+  flex-direction: column;
+}
+.login_auth {
+  margin-top: 100px;
+  border-radius: 10px;
+  border: none;
+  width: 60%;
+  font-size: 26px;
+  padding: 10px;
+}
+.pass_auth {
+  margin-top: 50px;
+  border-radius: 10px;
+  border: none;
+  width: 60%;
+  font-size: 26px;
+  padding: 10px;
+}
+.auth_btn {
+  margin-top: 100px;
+  margin-bottom: 70px;
+  background-color: #005869;
+  font-size: 26px;
+  color: #fff;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  width: 30%;
+}
+.auth_btn:hover {
+  background-color: #fff;
+  color: #005869;
+}
