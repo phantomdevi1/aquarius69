@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+* {
+  margin: 0 auto;
+  padding: 0 auto;
+  font-family: Inter;
+  transition: 0.5s;
+}
+
+header {
+  width: 100%;
+  height: 100px;
+  background-color: #3faba9;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  box-shadow: 0px 6px 5px #005869;
+}
+.toolbar {
+  display: flex;
+  gap: 35px;
+}
+.toolbar a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 32px;
+}
+.toolbar a:hover {
+  color: #005869;
+}
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+footer {
+  background-color: #005869;
+  margin-top: 150px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color: #fff;
+}
+.footer_title {
+  font-size: 48px;
+  margin-top: 60px;
+  font-weight: bold;
+}
+.adress_footer {
+  margin-top: 50px;
+}
+.adress_footer p {
+  font-size: 32px;
+  font-weight: bold;
+}
+.adress_footer a {
+  text-decoration: none;
+  color: #fff;
+}
+.adress_footer a:hover {
+  color: #3faba9;
+}
+.contacts_footer {
+  display: grid;
+  margin-top: 50px;
+}
+.phone_footer {
+  font-size: 32px;
+  color: #fff;
+  text-decoration: none;
+}
+.phone_footer:hover {
+  text-decoration: underline;
+}
+.mail_footer {
+  font-size: 32px;
+  color: #fff;
+  text-decoration: none;
+  margin-top: 20px;
+}
+.mail_footer:hover {
+  text-decoration: underline;
+}
+.support_footer {
+  margin-top: 65px;
+}
+.network_footer {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.networl_footer-img {
+  display: flex;
+  gap: 25px;
+}
+
+/* index */
+.index_content {
+  width: 100%;
+}
+.about_the_company {
+  display: flex;
+  margin-top: 100px;
+  width: 85%;
+}
+.text_about_company {
+  width: 50%;
+}
+.title_text_about {
+  font-size: 32px;
+  margin-bottom: 50px;
+}
+.description_title_text {
+  font-size: 24px;
+  max-width: 700px;
+  margin-left: 0px;
+}
+
+.video_index_block {
+  margin-top: 170px;
+}
+.video_index_block h2 {
+  font-size: 48px;
+  max-width: 1200px;
+  font-weight: 500;
+}
+.index_hr {
+  border: 3px solid #3faba9;
+  margin-top: 100px;
+  margin-bottom: 50px;
+  width: 85%;
+}
+
+.index_categories {
+  margin-top: 100px;
+  background-color: #005869;
+  height: 700px;
+  display: flex;
+}
+.index_categories img {
+  width: 500px;
+}
+
+.index_categories-title {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  margin-top: 75px;
+  gap: 10%;
+}
+.index_categories-title p {
+  font-size: 48px;
+  margin-left: 0px;
+}
+.reward_index_block {
+  display: flex;
+  margin-top: 120px;
+  width: 85%;
+}
