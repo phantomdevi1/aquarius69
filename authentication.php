@@ -44,17 +44,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['username']) && isset($
         // Пользователь найден, проверяем пароль
         $user = $result->fetch_assoc();
         if ($password === $user['password']) {
-            // Проверка на администратора
-            if ($user['is_admin'] == 1) {
-                // Перенаправление на страницу администратора
-                echo "<script>window.location = 'admin_home.php';</script>";
-                exit();
-            } else {
-                // Перенаправление на домашнюю страницу
-                echo "<script>window.location = 'home.php';</script>";
-                exit();
-            }
-        } else {
+          session_start(); // Начинаем сессию
+          $_SESSION['user_id'] = $user['user_id']; // Сохраняем id пользователя в сессии
+          if ($user['is_admin'] == 1) {
+              // Администратор - перенаправление на страницу администратора
+              echo "<script>window.location = 'admin_home.php';</script>";
+              exit();
+          } else {
+              // Обычный пользователь - перенаправление на главную страницу
+              echo "<script>window.location = 'home.php';</script>";
+              exit();
+          }
+      } else {
             // Неверный пароль, выводим сообщение
             echo "<script>alert('Неверный логин или пароль');</script>";
         }

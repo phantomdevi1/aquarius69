@@ -302,3 +302,55 @@ footer {
   background-color: #fff;
   color: #005869;
 }
+
+/* home */
+.user_home_content {
+  width: 80%;
+  min-height: 200px;
+  background-color: #3faba9;
+  border-radius: 10px;
+  margin-top: 100px;
+  text-align: center;
+  color: #fff;
+  display: grid;
+  margin-bottom: 75px;
+}
+.user_home_content p {
+  font-size: 48px;
+  margin-top: 75px;
+}
+.home_btn {
+  margin-top: 100px;
+  background-color: #005869;
+  color: #fff;
+  width: 60%;
+  height: 80px;
+  border: none;
+  font-size: 30px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.home_btn:hover {
+  background-color: #fff;
+  color: #005869;
+}
+.form_exit_btn {
+  width: 100%;
+}
+.exit_btn {
+  margin-top: 100px;
+  background-color: red;
+  color: #fff;
+  height: 80px;
+  border: none;
+  font-size: 30px;
+  border-radius: 10px;
+  width: 30%;
+  font-weight: 500;
+  margin-bottom: 75px;
+  cursor: pointer;
+}
+.exit_btn:hover {
+  background-color: #fff;
+  color: red;
+}
