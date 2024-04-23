@@ -170,7 +170,7 @@ footer {
   display: flex;
   background-color: #3faba9;
   border-radius: 10px;
-  height: 100px;
+  height: 60px;
   text-align: center;
   margin-top: 75px;
   color: #fff;
@@ -178,7 +178,7 @@ footer {
 }
 .title_page h1 {
   font-weight: 400;
-  font-size: 48px;
+  font-size: 32px;
 }
 .content_products-cards {
   margin-top: 91px;
@@ -386,4 +386,74 @@ footer {
 }
 .send_test:hover {
   background-color: #3faba9;
+}
+
+/* new news */
+.new_news_content {
+  margin-top: 50px;
+  border-radius: 10px;
+  width: 60%;
+  min-height: 200px;
+  display: grid;
+  text-align: center;
+}
+.title_new_news {
+  margin-top: 30px;
+  border-radius: 10px;
+  padding: 10px;
+  border: 1px solid black;
+  width: 80%;
+  font-size: 24px;
+}
+.new_news_content textarea {
+  margin-top: 30px;
+  border-radius: 10px;
+  padding: 10px;
+  width: 80%;
+  max-width: 600px;
+  max-height: 400px;
+  font-size: 20px;
+}
+.send_new_news {
+  margin-top: 30px;
+  border-radius: 10px;
+  padding: 10px;
+  width: 80%;
+  margin-bottom: 50px;
+  cursor: pointer;
+  background-color: #005869;
+  color: #fff;
+  border: none;
+  font-size: 24px;
+}
+.send_new_news:hover {
+  background-color: #3faba9;
+}
+
+/* test result */
+.test_result-content {
+  width: 80%;
+}
+.test_result-content {
+  margin-top: 20px;
+}
+.test_result-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 50px;
+}
+.test_result-content table th,
+.test_result-content table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+.test_result-content table th {
+  background-color: #f2f2f2;
+}
+.test_result-content table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+.test_result-content table tr:hover {
+  background-color: #ddd;
 }
