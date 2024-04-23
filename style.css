@@ -457,3 +457,14 @@ footer {
 .test_result-content table tr:hover {
   background-color: #ddd;
 }
+
+/* new product */
+.new_product_form p {
+  margin-top: 50px;
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+.success,
+.error {
+  text-align: center;
+}

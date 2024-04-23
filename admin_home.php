@@ -53,7 +53,7 @@ $conn->close();
     <button class="home_btn" onclick="document.location='.php'">Добавление сотрудников</button>
     <button class="home_btn" onclick="document.location='.php'">Добавление вопросов</button>
     <button class="home_btn" onclick="document.location='test_result.php'">Результаты тестирования</button>
-    <button class="home_btn" onclick="document.location='.php'">Добавление продукции</button>
+    <button class="home_btn" onclick="document.location='new_product.php'">Добавление продукции</button>
     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post" class="form_exit_btn"> <!-- Форма для кнопки выхода -->
         <input type="submit" name="logout" class="exit_btn" value="Выйти">
     </form>
