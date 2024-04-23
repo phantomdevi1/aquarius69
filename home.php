@@ -51,7 +51,7 @@ if (isset($_SESSION['user_id'])) {
 // Закрываем подключение к базе данных
 $conn->close();
 ?>
-    <button class="home_btn" onclick="document.location='page/new.html'">Техника безопасности</button>
+    <button class="home_btn" onclick="document.location='briefing.php'">Техника безопасности</button>
     <button class="home_btn" onclick="document.location='page/new.html'">Пройти тест</button>
     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post" class="form_exit_btn"> <!-- Форма для кнопки выхода -->
         <input type="submit" name="logout" class="exit_btn" value="Выйти">
