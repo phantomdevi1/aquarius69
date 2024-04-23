@@ -38,7 +38,7 @@ if (isset($_SESSION['user_id'])) {
         $user_data = $result->fetch_assoc();
         $full_name = $user_data['first_name'] . ' ' . $user_data['patronymic'];
         // Выводим приветствие с именем пользователя
-        echo "<p>Добро пожаловать, администраор, $full_name</p>";
+        echo "<p>Добро пожаловать, администратор, $full_name</p>";
     } else {
         echo "<p>Ошибка: Данные пользователя не найдены</p>";
     }
