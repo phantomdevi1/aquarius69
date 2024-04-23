@@ -52,7 +52,7 @@ if (isset($_SESSION['user_id'])) {
 $conn->close();
 ?>
     <button class="home_btn" onclick="document.location='briefing.php'">Техника безопасности</button>
-    <button class="home_btn" onclick="document.location='page/new.html'">Пройти тест</button>
+    <button class="home_btn" onclick="document.location='test.php'">Пройти тест</button>
     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post" class="form_exit_btn"> <!-- Форма для кнопки выхода -->
         <input type="submit" name="logout" class="exit_btn" value="Выйти">
     </form>
