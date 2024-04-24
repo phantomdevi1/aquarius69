@@ -232,6 +232,7 @@ footer {
   text-align: center;
   padding: 20px;
   border-radius: 10px;
+  width: 100%;
 }
 .title_news {
   font-size: 32px;
