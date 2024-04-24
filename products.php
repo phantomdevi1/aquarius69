@@ -15,7 +15,7 @@
         <a href="products.php">Продукция</a>
         <a href="news.php">Новости</a>
         <a href="authentication.php">Сотрудникам</a>
-        <a href="">Контакты</a>
+        <a href="contacts.html">Контакты</a>
       </div>
 </header>
 
