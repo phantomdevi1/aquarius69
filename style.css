@@ -594,3 +594,35 @@ footer {
 .submit_option_question:hover {
   background-color: #3faba9;
 }
+
+/* contacts */
+.info_block_contacts {
+  width: 40%;
+  margin-top: 50px;
+  display: grid;
+}
+.contacts_title {
+  font-size: 36px;
+  font-weight: 600;
+}
+.contacts_description {
+  margin-top: 15px;
+  font-size: 28px;
+}
+.contacts_description_href {
+  color: #3faba9;
+  text-decoration: none;
+}
+.contacts_description_href:hover {
+  color: #005869;
+  text-decoration: underline;
+}
+.contacts_description span {
+  color: #6b6969;
+  margin-right: 5px;
+}
+.map_contacts {
+  margin-top: 100px;
+  width: 1500px;
+  height: 500px;
+}
