@@ -537,3 +537,60 @@ footer {
 .new_user-btn:hover {
   background-color: #3faba9;
 }
+
+/* new task */
+.form_question {
+  display: grid;
+  margin-top: 50px;
+  width: 60%;
+}
+.textarea_question_form {
+  width: 70%;
+  border-radius: 10px;
+  border: 2px solid #3faba9;
+  padding: 10px;
+  font-size: 24px;
+  height: 200px;
+  max-width: 600px;
+}
+.option_question_form {
+  width: 85%;
+}
+
+.option_question_text {
+  border-radius: 10px;
+  padding: 10px;
+  margin-top: 20px;
+  width: 60%;
+}
+.option_question_checkbox {
+  margin-left: 10px;
+  margin-right: 5px;
+}
+.new_option_question {
+  margin-top: 50px;
+  border-radius: 10px;
+  border: none;
+  background-color: #005869;
+  color: #fff;
+  padding: 10px;
+  font-size: 24px;
+  cursor: pointer;
+}
+.new_option_question:hover {
+  background-color: #3faba9;
+}
+
+.submit_option_question {
+  margin-top: 20px;
+  border-radius: 10px;
+  border: none;
+  background-color: #005869;
+  color: #fff;
+  padding: 10px;
+  font-size: 24px;
+  cursor: pointer;
+}
+.submit_option_question:hover {
+  background-color: #3faba9;
+}
