@@ -50,7 +50,7 @@ if (isset($_SESSION['user_id'])) {
 $conn->close();
 ?>
     <button class="home_btn" onclick="document.location='new_news.php'">Добавление новостей</button>
-    <button class="home_btn" onclick="document.location='.php'">Добавление сотрудников</button>
+    <button class="home_btn" onclick="document.location='new_user.php'">Добавление сотрудников</button>
     <button class="home_btn" onclick="document.location='.php'">Добавление вопросов</button>
     <button class="home_btn" onclick="document.location='test_result.php'">Результаты тестирования</button>
     <button class="home_btn" onclick="document.location='new_product.php'">Добавление продукции</button>

@@ -468,3 +468,72 @@ footer {
 .error {
   text-align: center;
 }
+
+/* new user */
+.new_user-content {
+  width: 60%;
+  text-align: center;
+}
+.user_login {
+  width: 60%;
+  margin-top: 50px;
+  display: grid;
+}
+.input_login {
+  width: 70%;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 24px;
+  border: 2px solid #3faba9;
+}
+.input_password {
+  width: 70%;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 24px;
+  margin-top: 30px;
+  border: 2px solid #3faba9;
+}
+.user_login-admin {
+  width: 74%;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 24px;
+  margin-top: 30px;
+  border: 2px solid #3faba9;
+  cursor: pointer;
+}
+
+.user_passport {
+  margin-top: 20px;
+  display: grid;
+  width: 60%;
+  margin-bottom: 50px;
+}
+.user_passport input {
+  width: 70%;
+  padding: 10px;
+  font-size: 24px;
+  border-radius: 10px;
+  border: 2px solid #3faba9;
+  margin-top: 30px;
+}
+.date_text_user {
+  margin-top: 30px;
+  font-size: 24px;
+}
+.new_user-btn {
+  margin-top: 50px;
+  background-color: #005869;
+  color: #fff;
+  font-size: 24px;
+  width: 45%;
+  height: 60px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-bottom: 50px;
+}
+.new_user-btn:hover {
+  background-color: #3faba9;
+}
