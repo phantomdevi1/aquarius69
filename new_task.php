@@ -8,7 +8,7 @@
   <link rel="icon" href="img/admin_favicon.png" type="image/x-icon" />
 </head>
 <body>
-<header id="myHeader">
+<header id="myHeader" class="staff_header">
   <a href="admin_home.php"><img src="img/logo_admin_header.svg" alt=""></a>
 </header>
 <div class="new_user-content">

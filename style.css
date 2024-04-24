@@ -204,7 +204,7 @@ footer {
   max-height: 300px;
 }
 .where_buy button {
-  width: 20%;
+  width: 100%;
   margin-top: 100px;
   background-color: #005869;
   border: none;
@@ -232,7 +232,7 @@ footer {
   text-align: center;
   padding: 20px;
   border-radius: 10px;
-  width: 100%;
+  width: 90%;
 }
 .title_news {
   font-size: 32px;
@@ -624,6 +624,272 @@ footer {
 }
 .map_contacts {
   margin-top: 100px;
-  width: 1500px;
-  height: 500px;
+  width: 100%;
+  height: auto;
+  min-height: 500px;
+}
+
+/* adaptive */
+
+@media screen and (width < 1800px) {
+  .slick-prev,
+  .slick-next {
+    position: relative;
+  }
+}
+@media screen and (width < 1400px) {
+  .toolbar a {
+    font-size: 20px;
+  }
+  header img {
+    width: 200px;
+  }
+
+  /* index */
+  .about_the_company {
+    flex-direction: column-reverse;
+  }
+  .about_the_company img {
+    width: 600px;
+    margin-top: 20px;
+  }
+  .video_index_block h2 {
+    font-size: 32px;
+    max-width: 800px;
+  }
+  .video_index_block video {
+    width: 800px;
+  }
+  .index_categories-title {
+    gap: 15%;
+  }
+  .index_categories-title p {
+    font-size: 24px;
+  }
+  .reward_index_block img {
+    width: 200px;
+  }
+}
+
+@media screen and (width < 1000px) {
+  header {
+    flex-direction: column;
+    padding-top: 1%;
+  }
+  .staff_header {
+    flex-direction: row;
+  }
+  /* index */
+
+  .text_about_company {
+    width: 80%;
+  }
+  .video_index_block video {
+    width: 600px;
+  }
+  .index_categories {
+    flex-direction: column;
+    height: auto;
+  }
+  .index_categories-title {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .index_categories-title p {
+    margin: 0 auto;
+  }
+  .reward_index_block {
+    width: 90%;
+    flex-wrap: wrap;
+  }
+  .reward_index_block img {
+    margin-top: 50px;
+  }
+
+  /* contacts */
+  .info_block_contacts {
+    width: 80%;
+  }
+}
+
+@media screen and (width < 888px) {
+  /* index */
+  .video_index_block h2 {
+    max-width: 80%;
+  }
+  .index_categories img {
+    width: 300px;
+  }
+  .video_index_block video {
+    width: 100%;
+  }
+
+  /* products */
+  .title_page {
+    width: 70%;
+  }
+  /* news */
+  .title_news {
+    font-size: 24px;
+  }
+  .content-news_block {
+    font-size: 18px;
+  }
+
+  /* authentication */
+  .auth_block {
+    width: 80%;
+  }
+
+  /* home */
+  .user_home_content {
+    width: 90%;
+  }
+  .user_home_content p {
+    font-size: 28px;
+  }
+  .home_btn {
+    width: 80%;
+    font-size: 24px;
+    height: 60px;
+  }
+  .exit_btn {
+    width: 80%;
+    font-size: 24px;
+    height: 60px;
+  }
+}
+
+@media screen and (width < 686px) {
+  header {
+    height: auto;
+  }
+  .toolbar {
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .sticky {
+    position: relative;
+  }
+
+  .footer_title {
+    font-size: 38px;
+  }
+  .text_about_company {
+    width: 95%;
+  }
+  .about_the_company img {
+    width: 80%;
+  }
+  .reward_index_block {
+    margin-top: 25px;
+  }
+  .adress_footer p,
+  .phone_footer,
+  .mail_footer {
+    font-size: 28px;
+  }
+  /* index */
+
+  .index_hr {
+    margin-top: 50px;
+  }
+
+  /* product */
+  .product_block {
+    width: 90%;
+  }
+  .product_block img {
+    width: 80%;
+  }
+
+  /* news */
+  .news_content {
+    width: 90%;
+  }
+
+  /* contacts */
+  .map_contacts {
+    min-height: 300px;
+  }
+
+  /* test */
+  .question {
+    max-width: 80%;
+  }
+}
+
+@media screen and (width < 450px) {
+  .video_index_block h2 {
+    font-size: 24px;
+  }
+  .index_categories-title p {
+    font-size: 18px;
+  }
+  .index_categories img {
+    width: 90%;
+  }
+  .networl_footer-img {
+    gap: 5px;
+  }
+  .description_title_text {
+    font-size: 18px;
+  }
+
+  /* product */
+  .where_buy button {
+    font-size: 30px;
+    height: 50px;
+  }
+  .title_page h1 {
+    font-size: 24px;
+  }
+  .product_block p {
+    font-size: 24px;
+  }
+
+  /* news */
+  .news_content {
+    width: 100%;
+  }
+  .news_block {
+    padding: 5px;
+  }
+  .title_news {
+    font-size: 18px;
+  }
+  .date_news {
+    font-size: 15px;
+  }
+  .content-news_block {
+    margin: 10px;
+  }
+
+  /* authentication */
+  .login_auth,
+  .pass_auth {
+    width: 80%;
+    font-size: 18px;
+  }
+  .auth_btn {
+    width: 60%;
+    margin-top: 25px;
+    margin-bottom: 30px;
+  }
+
+  /* contacts */
+  .info_block_contacts {
+    width: 100%;
+  }
+  .contacts_description {
+    font-size: 18px;
+  }
+
+  /* test */
+  .send_test {
+    width: 80%;
+    font-size: 24px;
+    
+  }
 }

@@ -44,7 +44,7 @@
   </style>
 </head>
 <body>
-  <header id="myHeader">
+  <header id="myHeader" class="staff_header">
     <a href="home.php"><img src="img/logo_header.svg" alt="" /></a>
   </header>
 
