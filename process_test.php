@@ -15,7 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         foreach ($answers as $question_id => $answer) {
             $sql = "SELECT correct_answer FROM TestQuestions WHERE question_id = '$question_id'";
             $result = $conn->query($sql);
-            if ($result->num_rows == 1) {
+            if ($result && $result->num_rows == 1) {
                 $row = $result->fetch_assoc();
                 if ($row['correct_answer'] == $answer) {
                     $correct_answers++;
@@ -30,7 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Добавляем результат теста в таблицу TestResults
         $sql = "INSERT INTO TestResults (user_id, test_id, score, date) VALUES ('$user_id', '$test_id', '$score', '$date')";
         if ($conn->query($sql) === TRUE) {
-          echo "<center>";
+            echo "<center>";
             echo "<p>Вы успешно прошли тест! Ваш результат: $score% правильных ответов.</p>";
             $conn->close();
             echo "<p>Вы будете перенаправлены на главную страницу через 10 секунд...</p>";

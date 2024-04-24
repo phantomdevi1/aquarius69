@@ -32,10 +32,20 @@
                 // Выводим вопросы
                 echo '<div class="question">';
                 echo '<h3>' . $row["question_text"] . '</h3>';
-                // Отображаем варианты ответов
-                echo '<label><input type="radio" name="answer[' . $row["question_id"] . ']" value="1"> Вариант 1</label><br>';
-                echo '<label><input type="radio" name="answer[' . $row["question_id"] . ']" value="2"> Вариант 2</label><br>';
-                echo '<label><input type="radio" name="answer[' . $row["question_id"] . ']" value="3"> Вариант 3</label><br>';
+
+                // Запрос к базе данных для получения вариантов ответов для текущего вопроса
+                $question_id = $row["question_id"];
+                $options_sql = "SELECT * FROM QuestionOptions WHERE question_id = $question_id";
+                $options_result = $conn->query($options_sql);
+
+                if ($options_result->num_rows > 0) {
+                    while($option_row = $options_result->fetch_assoc()) {
+                        // Отображаем варианты ответов
+                        echo '<label><input type="radio" name="answer[' . $question_id . ']" value="' . $option_row["option_id"] . '"> ' . $option_row["option_text"] . '</label><br>';
+                    }
+                } else {
+                    echo "Нет вариантов ответов для этого вопроса.";
+                }
                 echo '</div>';
             }
         } else {
