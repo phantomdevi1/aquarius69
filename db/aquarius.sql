@@ -1,40 +1,17 @@
--- phpMyAdmin SQL Dump
--- version 5.2.0
--- https://www.phpmyadmin.net/
---
--- Хост: 127.0.0.1:3307
--- Время создания: Апр 24 2024 г., 15:33
--- Версия сервера: 8.0.30
--- Версия PHP: 8.0.22
-
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
 SET time_zone = "+00:00";
-
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
 /*!40101 SET NAMES utf8mb4 */;
 
---
--- База данных: `aquarius`
---
-
--- --------------------------------------------------------
-
---
--- Структура таблицы `briefing`
---
 
 CREATE TABLE `briefing` (
   `img_id` int NOT NULL,
   `img_way` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Дамп данных таблицы `briefing`
---
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 ;
 
 INSERT INTO `briefing` (`img_id`, `img_way`) VALUES
 (1, 'img/briefing/image22.svg'),
@@ -61,22 +38,12 @@ INSERT INTO `briefing` (`img_id`, `img_way`) VALUES
 (22, 'img/briefing/image43.svg'),
 (23, 'img/briefing/image44.svg');
 
--- --------------------------------------------------------
-
---
--- Структура таблицы `News`
---
-
 CREATE TABLE `News` (
   `news_id` int NOT NULL,
   `title` varchar(255) NOT NULL,
   `content` text NOT NULL,
   `date` date NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Дамп данных таблицы `News`
---
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 ;
 
 INSERT INTO `News` (`news_id`, `title`, `content`, `date`) VALUES
 (1, 'Aquarius представила новую линейку ноутбуков с инновационным дизайном', 'Компания Aquarius представила новую линейку ноутбуков, включающую в себя стильные и производительные модели с уникальным дизайном.', '2024-04-22'),
@@ -92,12 +59,6 @@ INSERT INTO `News` (`news_id`, `title`, `content`, `date`) VALUES
 (11, 'тестирование', 'тест\r\n', '2024-04-23'),
 (13, 'тестирование', 'тест2', '2024-04-23');
 
--- --------------------------------------------------------
-
---
--- Структура таблицы `PersonalData`
---
-
 CREATE TABLE `PersonalData` (
   `user_id` int NOT NULL,
   `first_name` varchar(255) NOT NULL,
@@ -109,11 +70,7 @@ CREATE TABLE `PersonalData` (
   `issued_by` varchar(255) NOT NULL,
   `birth_date` date NOT NULL,
   `birth_place` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Дамп данных таблицы `PersonalData`
---
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 ;
 
 INSERT INTO `PersonalData` (`user_id`, `first_name`, `last_name`, `patronymic`, `passport_number`, `passport_series`, `issue_date`, `issued_by`, `birth_date`, `birth_place`) VALUES
 (1, 'Иван', 'Иванов', 'Иванович', '1234567890', '1234', '2000-01-01', 'Отделением УФМС России', '1980-01-01', 'Москва'),
@@ -123,21 +80,11 @@ INSERT INTO `PersonalData` (`user_id`, `first_name`, `last_name`, `patronymic`, 
 (6, 'Анна', 'Сидорова', 'Ивановна', '987654', '5432', '2023-01-03', 'МВД России', '1988-12-10', 'Новосибирск'),
 (7, 'Илья', 'Груздев', 'Денисович', '1234567', '1234', '2024-04-02', 'мвд', '2024-04-05', 'Россия');
 
--- --------------------------------------------------------
-
---
--- Структура таблицы `Products`
---
-
 CREATE TABLE `Products` (
   `product_id` int NOT NULL,
   `name` varchar(255) NOT NULL,
   `image_url` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Дамп данных таблицы `Products`
---
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 ;
 
 INSERT INTO `Products` (`product_id`, `name`, `image_url`) VALUES
 (1, 'Персональные компьютеры', 'img/products/product1.svg'),
@@ -150,22 +97,12 @@ INSERT INTO `Products` (`product_id`, `name`, `image_url`) VALUES
 (8, 'Серверы', 'img/products/product8.svg'),
 (9, 'Коммутаторы', 'img/products/product9.svg');
 
--- --------------------------------------------------------
-
---
--- Структура таблицы `QuestionOptions`
---
-
 CREATE TABLE `QuestionOptions` (
   `option_id` int NOT NULL,
   `question_id` int DEFAULT NULL,
   `option_text` varchar(255) DEFAULT NULL,
   `is_correct` tinyint(1) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Дамп данных таблицы `QuestionOptions`
---
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 ;
 
 INSERT INTO `QuestionOptions` (`option_id`, `question_id`, `option_text`, `is_correct`) VALUES
 (1, 1, 'Установка антивирусного ПО', 1),
@@ -209,21 +146,11 @@ INSERT INTO `QuestionOptions` (`option_id`, `question_id`, `option_text`, `is_co
 (39, 10, 'Наличие на экране странных сообщений', 0),
 (40, 10, 'Использование сложных паролей', 0);
 
--- --------------------------------------------------------
-
---
--- Структура таблицы `TestQuestions`
---
-
 CREATE TABLE `TestQuestions` (
   `question_id` int NOT NULL,
   `test_id` int NOT NULL,
   `question_text` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Дамп данных таблицы `TestQuestions`
---
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 ;
 
 INSERT INTO `TestQuestions` (`question_id`, `test_id`, `question_text`) VALUES
 (1, 1, 'Какие из перечисленных методов могут помочь защитить ПК на производстве от вредоносных программ?'),
@@ -237,61 +164,31 @@ INSERT INTO `TestQuestions` (`question_id`, `test_id`, `question_text`) VALUES
 (9, 1, 'Какие меры безопасности рекомендуется соблюдать при работе с электронной почтой на ПК в офисе?'),
 (10, 1, 'Какие признаки указывают на возможное заражение компьютера вредоносным ПО?');
 
--- --------------------------------------------------------
-
---
--- Структура таблицы `TestResults`
---
-
 CREATE TABLE `TestResults` (
   `result_id` int NOT NULL,
   `user_id` int NOT NULL,
   `test_id` int NOT NULL,
   `score` int NOT NULL,
   `date` date NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Дамп данных таблицы `TestResults`
---
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 ;
 
 INSERT INTO `TestResults` (`result_id`, `user_id`, `test_id`, `score`, `date`) VALUES
 (10, 4, 1, 0, '2024-04-24');
 
--- --------------------------------------------------------
-
---
--- Структура таблицы `Tests`
---
-
 CREATE TABLE `Tests` (
   `test_id` int NOT NULL,
   `content` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Дамп данных таблицы `Tests`
---
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 ;
 
 INSERT INTO `Tests` (`test_id`, `content`) VALUES
 (1, 'Техника безопасности на предприятии сборки компьютеров, серверов и т.д.');
-
--- --------------------------------------------------------
-
---
--- Структура таблицы `Users`
---
 
 CREATE TABLE `Users` (
   `user_id` int NOT NULL,
   `username` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
   `is_admin` tinyint(1) NOT NULL DEFAULT '0'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Дамп данных таблицы `Users`
---
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 ;
 
 INSERT INTO `Users` (`user_id`, `username`, `password`, `is_admin`) VALUES
 (1, '1', '1', 1),
@@ -301,146 +198,74 @@ INSERT INTO `Users` (`user_id`, `username`, `password`, `is_admin`) VALUES
 (6, 'user3', 'password3', 0),
 (7, 'ilia', '1234', 1);
 
---
--- Индексы сохранённых таблиц
---
 
---
--- Индексы таблицы `briefing`
---
 ALTER TABLE `briefing`
   ADD PRIMARY KEY (`img_id`);
 
---
--- Индексы таблицы `News`
---
 ALTER TABLE `News`
   ADD PRIMARY KEY (`news_id`);
 
---
--- Индексы таблицы `PersonalData`
---
 ALTER TABLE `PersonalData`
   ADD PRIMARY KEY (`user_id`);
 
---
--- Индексы таблицы `Products`
---
 ALTER TABLE `Products`
   ADD PRIMARY KEY (`product_id`);
 
---
--- Индексы таблицы `QuestionOptions`
---
 ALTER TABLE `QuestionOptions`
   ADD PRIMARY KEY (`option_id`),
   ADD KEY `question_id` (`question_id`);
 
---
--- Индексы таблицы `TestQuestions`
---
 ALTER TABLE `TestQuestions`
   ADD PRIMARY KEY (`question_id`),
   ADD KEY `test_id` (`test_id`);
 
---
--- Индексы таблицы `TestResults`
---
 ALTER TABLE `TestResults`
   ADD PRIMARY KEY (`result_id`),
   ADD KEY `user_id` (`user_id`),
   ADD KEY `test_id` (`test_id`);
 
---
--- Индексы таблицы `Tests`
---
 ALTER TABLE `Tests`
   ADD PRIMARY KEY (`test_id`);
 
---
--- Индексы таблицы `Users`
---
 ALTER TABLE `Users`
   ADD PRIMARY KEY (`user_id`),
   ADD UNIQUE KEY `username` (`username`);
 
---
--- AUTO_INCREMENT для сохранённых таблиц
---
 
---
--- AUTO_INCREMENT для таблицы `briefing`
---
 ALTER TABLE `briefing`
   MODIFY `img_id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
---
--- AUTO_INCREMENT для таблицы `News`
---
 ALTER TABLE `News`
   MODIFY `news_id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
---
--- AUTO_INCREMENT для таблицы `Products`
---
 ALTER TABLE `Products`
   MODIFY `product_id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
---
--- AUTO_INCREMENT для таблицы `QuestionOptions`
---
 ALTER TABLE `QuestionOptions`
   MODIFY `option_id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
 
---
--- AUTO_INCREMENT для таблицы `TestQuestions`
---
 ALTER TABLE `TestQuestions`
   MODIFY `question_id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
---
--- AUTO_INCREMENT для таблицы `TestResults`
---
 ALTER TABLE `TestResults`
   MODIFY `result_id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
---
--- AUTO_INCREMENT для таблицы `Tests`
---
 ALTER TABLE `Tests`
   MODIFY `test_id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
---
--- AUTO_INCREMENT для таблицы `Users`
---
 ALTER TABLE `Users`
   MODIFY `user_id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
---
--- Ограничения внешнего ключа сохраненных таблиц
---
 
---
--- Ограничения внешнего ключа таблицы `PersonalData`
---
 ALTER TABLE `PersonalData`
   ADD CONSTRAINT `personaldata_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `Users` (`user_id`);
 
---
--- Ограничения внешнего ключа таблицы `QuestionOptions`
---
 ALTER TABLE `QuestionOptions`
   ADD CONSTRAINT `questionoptions_ibfk_1` FOREIGN KEY (`question_id`) REFERENCES `TestQuestions` (`question_id`);
 
---
--- Ограничения внешнего ключа таблицы `TestQuestions`
---
 ALTER TABLE `TestQuestions`
   ADD CONSTRAINT `testquestions_ibfk_1` FOREIGN KEY (`test_id`) REFERENCES `Tests` (`test_id`);
 
---
--- Ограничения внешнего ключа таблицы `TestResults`
---
 ALTER TABLE `TestResults`
   ADD CONSTRAINT `testresults_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `Users` (`user_id`),
   ADD CONSTRAINT `testresults_ibfk_2` FOREIGN KEY (`test_id`) REFERENCES `Tests` (`test_id`);
