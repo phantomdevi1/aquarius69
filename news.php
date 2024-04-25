@@ -29,7 +29,7 @@
   include 'config.php';
 
   // Запрос к базе данных
-  $sql = "SELECT `title`, `content`, `date` FROM `News`";
+  $sql = "SELECT `title`, `content`, `date` FROM `News` ORDER BY news_id DESC";
   $result = $conn->query($sql);
 
   // Вывод данных
