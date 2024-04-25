@@ -710,6 +710,12 @@ footer {
   .info_block_contacts {
     width: 80%;
   }
+
+  /* new user */
+  .user_login,
+  .user_passport {
+    width: 100%;
+  }
 }
 
 @media screen and (width < 888px) {
@@ -757,6 +763,16 @@ footer {
     width: 80%;
     font-size: 24px;
     height: 60px;
+  }
+
+  /* new user */
+  .new_user-content {
+    width: 90%;
+  }
+
+  /* result */
+  .test_result-content {
+    width: 90%;
   }
 }
 
@@ -817,6 +833,14 @@ footer {
   /* test */
   .question {
     max-width: 80%;
+  }
+
+  /* new task */
+  .form_question {
+    width: 80%;
+  }
+  .option_question_text {
+    width: 80%;
   }
 }
 
@@ -890,6 +914,47 @@ footer {
   .send_test {
     width: 80%;
     font-size: 24px;
-    
+  }
+
+  /* new news */
+  .new_news_content {
+    width: 80%;
+  }
+  .title_new_news {
+    width: 80%;
+    padding: 2px;
+    font-size: 18px;
+  }
+  .new_news_content textarea {
+    font-size: 18px;
+  }
+  .send_new_news {
+    font-size: 20px;
+  }
+
+  /* admin home */
+  .home_btn {
+    font-size: 20px;
+  }
+
+  /* new user */
+  .user_form input,
+  .user_login-admin,
+  .user_passport input {
+    font-size: 18px;
+  }
+  .new_user-btn {
+    width: 60%;
+    height: 40px;
+  }
+
+  /* result */
+  .display_fourteen_none {
+    display: none;
+  }
+
+  /* new product */
+  .new_product_form p {
+    font-size: 20px;
   }
 }

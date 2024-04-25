@@ -27,9 +27,9 @@
   <table>
     <tr>
       <th>ФИО сотрудника</th>
-      <th>Логин</th>
+      <th class="display_fourteen_none">Логин</th>
       <th>Процент теста</th>
-      <th>Дата прохождения</th>
+      <th class="display_fourteen_none">Дата прохождения</th>
     </tr>
     <?php
     include 'config.php';
@@ -49,9 +49,9 @@
         // Выводим информацию о результатах тестирования в таблицу
         echo "<tr>";
         echo "<td>" . $row['last_name'] . " " . $row['first_name'] . " " . $row['patronymic'] . "</td>";
-        echo "<td>" . $row['username'] . "</td>";
+        echo "<td class='display_fourteen_none'>" . $row['username'] . "</td>";
         echo "<td class='$color_class'>" . $row['score'] . "%</td>";
-        echo "<td>" . $row['date'] . "</td>";
+        echo "<td class='display_fourteen_none'>" . $row['date'] . "</td>";
         echo "</tr>";
       }
     } else {

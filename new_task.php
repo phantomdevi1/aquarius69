@@ -28,7 +28,7 @@
     <textarea class="textarea_question_form" name="question_text" placeholder="Текст вопроса"  required></textarea>
     <div class="option_question_form">
       <input class="option_question_text" type="text" name="option_text[]" placeholder="Вариант ответа" required>
-      <input class="option_question_checkbox" type="checkbox" name="is_correct[]"><span>Правильный</span>
+     <div class=""> <input class="option_question_checkbox" type="checkbox" name="is_correct[]"><span>Правильный</span></div>
     </div>
     <button class="new_option_question" type="button" onclick="addOption()">Добавить вариант</button>
     <input class="submit_option_question" type="submit" value="Добавить вопрос">
